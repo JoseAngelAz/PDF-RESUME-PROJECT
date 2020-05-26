@@ -1,0 +1,29 @@
+{
+	"imagePath":"image.jpg",
+	"nombre":"chemo",
+	"edad":34,
+	"direccion":"soyapango",
+	"telefono":22344345,
+	"celular":75451245,
+	"email":"email@email.com",
+	"dui":"0784512457",
+	"nit":"7894564552564",
+	"licencia":"ninguna",
+	"nivel_acadmy":"bachiller",
+	"lugar_acadmy":"santanita",
+	"info_tec":"infotech",
+	"otros_estudios":"otros",
+	"exp_laboral":"exp laboral",
+	"conocimientos":"conocimientos",
+	"skills":"habilidades",
+	"ref_personales":[
+		{
+			"nombre_ref_uno":"fulano",
+			"numero_ref_uno":22457845
+		},
+		{
+			"nombre_ref_uno":"fulano two",
+			"numero_ref_uno":22454578
+		}
+		]
+}

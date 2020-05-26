@@ -1,0 +1,9 @@
+Desarrollar aplicación para crear un CV(curriculum viate) ingresando por medio de formulario los datos que deberá de llevar cada apartado del CV.
+
+Deberá existir un CV por cada usuario y estos deberán de poder ser modificados solo por el usuario quien creó su CV.
+
+Se deberá manejar los roles de los usuarios para que exista un administrador y usuarios comunes.
+
+Manejar la seguridad de los roles de usuarios con un sistema de login, encriptando las contraseñas.
+
+Crear una opción para que cada ususario descargue su CV en formato PDF, solo el administrador podrá descargar los CV que no le pertenezcan.

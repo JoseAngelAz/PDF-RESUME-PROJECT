@@ -1,0 +1,37 @@
+El backend del proyecto deberá de ser hecho con Node JS y Express
+datos que deben estar en el modelo del CV (Resume):
+
+Fotografía: 'perfil.jpg'
+
+Nombre: 'Fulano de atole'
+Edad: 24
+Dirección: Col Pateles django
+Telefono: 22345435
+Celular: 70145245
+Email: a@email.com
+Dui: 045784579
+Nit: 0545-457865-896-5
+Licencia: Motocicleta Clase A
+
+EDUCACIÓN
+Nivel Academico
+Lugar ultimo de estudio
+
+FORMACIÓN TÉCNICA
+campo para info tecnica
+
+Otros Estudios
+campo para otros Estudios
+
+EXPERIENCIA LABORAL
+campo para experiencia LABORAL
+
+Conocimientos
+campo para Conocimientos
+
+Habilidades
+campo para Habilidades
+
+REFERENCIAS
+Personales
+campo para referencias personales 
