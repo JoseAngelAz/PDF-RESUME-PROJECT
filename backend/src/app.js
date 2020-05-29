@@ -40,6 +40,6 @@ app.use(express.json());
 app.use(require('./routes/index'));
 app.use('/api/login',require('./routes/login'));
 app.use('/api/users',require('./routes/users'));
-app.use('/api/resume',require('./routes/resume'));
+app.use('/api/resumes',require('./routes/resume'));
 
 module.exports = app;
