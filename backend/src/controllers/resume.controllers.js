@@ -15,24 +15,81 @@ resumeCtrl.getResume = async(req,res)=>{
 
 //Crear Resume(FUNCIONA)
 resumeCtrl.createResume = async(req,res)=>{
-    const  {imagePath,nombre,edad,direccion,telefono,
-    celular,email,dui,nit,licencia,nivel_acadmy,lugar_acadmy,
-    info_tec,otros_estudios,exp_laboral,conocimientos,skills,
-    ref_personales} = req.body;
-    const newResume = new Resume({imagePath,nombre,edad,direccion,telefono,
-    celular,email,dui,nit,licencia,nivel_acadmy,lugar_acadmy,
-    info_tec,otros_estudios,exp_laboral,conocimientos,skills,
-    ref_personales});
+    const {
+        imagePath,
+        nombre,
+        edad,
+        direccion,
+        telefono,
+        celular,
+        email,
+        dui,
+        nit,
+        licencia,
+        nivel_acadmy,
+        lugar_acadmy,
+        info_tec,
+        otros_estudios,
+        exp_laboral,
+        conocimientos,
+        skills,
+        nombre_ref_uno,
+        numero_ref_uno,
+        nombre_ref_dos,
+        numero_ref_dos} = req.body;
+    const newResume = new Resume(
+        {
+            imagePath,
+            nombre,
+            edad,
+            direccion,
+            telefono,
+            celular,
+            email,
+            dui,
+            nit,
+            licencia,
+            nivel_acadmy,
+            lugar_acadmy,
+            info_tec,
+            otros_estudios,
+            exp_laboral,
+            conocimientos,
+            skills,
+            nombre_ref_uno,
+            numero_ref_uno,
+            nombre_ref_dos,
+            numero_ref_dos}
+    );
     await newResume.save();
+    console.log(newResume);
     res.json({message:'POST- Resume Creado'});
 }
 
 //Modificar Resume(FUNCIONA)
 resumeCtrl.updateResume = async(req,res)=>{
-    const resumeUpdated = {imagePath,nombre,edad,direccion,telefono,
-        celular,email,dui,nit,licencia,nivel_acadmy,lugar_acadmy,
-        info_tec,otros_estudios,exp_laboral,conocimientos,skills,
-        ref_personales} = req.body;
+    const resumeUpdated = {
+        imagePath,
+        nombre,
+        edad,
+        direccion,
+        telefono,
+        celular,
+        email,
+        dui,
+        nit,
+        licencia,
+        nivel_acadmy,
+        lugar_acadmy,
+        info_tec,
+        otros_estudios,
+        exp_laboral,
+        conocimientos,
+        skills,
+        nombre_ref_uno,
+        numero_ref_uno,
+        nombre_ref_dos,
+        numero_ref_dos} = req.body;
         await Resume.findOneAndUpdate({_id:req.params.id},resumeUpdated);
         res.json({message:'PUT- Resume Actualizado'});
 }

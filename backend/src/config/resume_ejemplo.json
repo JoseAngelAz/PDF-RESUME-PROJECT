@@ -26,4 +26,30 @@
 			"numero_ref_uno":22454578
 		}
 		]
+},
+{
+
+	"imagePath": "algo.png",
+	"nombre": "jose angel ",
+	"edad": "25",
+	"direccion": "Soyapango San Salvador",
+	"telefono": "70095556",
+	"celular": "70095556",
+	"email": "hoeangeruvirtual@gmail.com",
+	"dui": "12321321321",
+	"nit": "12321321312",
+	"licencia": "moto",
+	"nivel_acadmy": "bachiller",
+	"lugar_acadmy": "santa anita",
+	"info_tec": "java",
+	"otros_estudios": "inglés",
+	"exp_laboral": "pizza hut",
+	"conocimientos": "sql",
+	"skills": "confiable",
+	"nombre_ref_uno": "pandulfo",
+	"numero_ref_uno": "1234567",
+	"nombre_ref_dos": "manu",
+	"numero_ref_dos": "213232132"
+
 }
+

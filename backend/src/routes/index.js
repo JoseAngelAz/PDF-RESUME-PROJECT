@@ -1,7 +1,11 @@
-const express = require('express');
-const app = express();
+const {Router} = require('express');
+const router = Router();
+const {GetIndex,GetAbout} = require('../controladores/indexInit');
 
-app.use(require('./login'));
-app.use(require('./register'));
+router.route('/index')
+.get(GetIndex)
 
-module.exports = app;
+router.route('/about')
+.get(GetAbout)
+
+module.exports = router;

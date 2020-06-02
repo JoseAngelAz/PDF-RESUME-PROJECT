@@ -1,6 +1,6 @@
 const{Schema,model} = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator');
-
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 let rolesValidos =([
     {
         values:["ADMIN","USER"],
@@ -9,27 +9,26 @@ let rolesValidos =([
 ])
 
 const userSchema = new Schema({
-    username:{type:String, required:true,trim:true},
+    nombre:{type:String, required:true,trim:true},
     email:{type:String,required:true},
     password:{type:String,required:true},
     date:{type:Date, default: Date.now},
-    role:{type:String,default:'USER',required:[true],enum:rolesValidos}
+    role:{type:String,default:'USER'}
 },{
     timestamps:true
 });
 
-
-//elimina la key password del objeto que retorna al momento de crear el usuario
-
-userSchema.methods.toJson = function(){
-    let user = this;
-    let userObject = user.toObject();
-    delete userObject.password;
-    return userObject;
+//encryptando el password
+userSchema.methods.encryptPassword = async(password)=>{
+    const salt = await bcrypt.genSalt(10);
+    const hash = bcrypt.hash(password,salt);
+    return hash;
 };
 
-userSchema.plugin(uniqueValidator,{
-    message:'{PATH} debe de ser único'
-});
+//comparar passwords
+userSchema.methods.matchPassword = async function(password){
+    return await bcrypt.compare(password, this.password);
+};
 
-module.exports = model('User',userSchema);
+
+module.exports = mongoose.model('User',userSchema);
